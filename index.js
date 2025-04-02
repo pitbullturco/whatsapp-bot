@@ -1,15 +1,11 @@
-// Teste de atualização
-const express = require('express');
-const bodyParser = require('body-parser');
+const http = require('http');
 
-const app = express();
-app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-    res.send('Bot WhatsApp rodando!');
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Servidor Node.js rodando com sucesso!');
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
+server.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
