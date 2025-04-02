@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,7 +18,4 @@
     "whatsapp-web.js": "^1.22.0",
     "ws": "^7.5.5"
   }
-  "scripts": {
-  "start": "node index.js"
-}
 }
